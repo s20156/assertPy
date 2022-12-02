@@ -36,3 +36,6 @@ class PlanetsTest(unittest.TestCase):
 
     def testOnMarsIsSmallerThanOnEarth(self):
         assert_that(float(self.temp.get_age_on_planet("mars", 1000000))).is_less_than(float(self.temp.get_age_on_planet("ziemia", 1000000)))
+
+    def tearDown(self):
+        self.temp = None
